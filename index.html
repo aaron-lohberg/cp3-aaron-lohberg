@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="/styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+  <title>Calculator 2.0</title>
+</head>
+
+<body>
+  <div id="content">
+  <div id="leftBlock"></div>
+  <div id="app">
+    <h1>Real Calculator</h1>
+    <input v-model="number1" placeholder="First Number"></p>
+
+    <input v-model="operator" placeholder="(+-/*%)"></p>
+
+    <input v-model="number2" placeholder="Second Number"></p>
+
+    <p><i>Full Equation:</i> {{ number1 }} {{ operator }} {{ number2 }} = {{ answer }}</p>
+
+    <button v-on:click="solve">Solve</button>
+
+    <p>Answer is: {{ answer }} </p>
+
+    <br>
+    <br>
+    <hr>
+    <p>So you think you understand math? Here's an intro to college calculus: </p>
+    <h1>Mindblowing Calculator</h1>
+    <input v-model="badNumber1" placeholder="First Number"></p>
+
+    <input v-model="bOperator" placeholder="(+-/*% or D for Derivative)"></p>
+
+    <input v-model="badNumber2" placeholder="Second Number"></p>
+
+    <p>Full Equation: {{ badNumber1 }} {{ bOperator }} {{ badNumber2 }} = {{ badAnswer}} </p>
+    <button v-on:click="badSolve">Amaze Me</button>
+
+    <p><i>9/10 dentists say the answer is:</i>   {{ badAnswer }} </p>
+    <img v-bind:src="url" />
+    <footer>Here's a link to the source code: <a href="https://github.com/BYU-CS-260-Winter-2019/cp-3-aaron-lohberg">cp-3-aaron-lohberg</a></footer>
+  </div>
+  <div id="rightBlock"></div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+  <script src="/script.js"></script>
+</body>
+
+</html>
